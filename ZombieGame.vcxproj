@@ -137,11 +137,6 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="C:\Users\nbz\Desktop\map.png" />
-    <Image Include="C:\Users\nbz\Downloads\skeleton_0.png" />
-    <Image Include="C:\Users\nbz\Downloads\zombie_0.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="define.h" />
     <ClInclude Include="knight.hpp" />
     <ClInclude Include="player.hpp" />

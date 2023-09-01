@@ -20,17 +20,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="C:\Users\nbz\Downloads\zombie_0.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="C:\Users\nbz\Downloads\skeleton_0.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="C:\Users\nbz\Desktop\map.png">
-      <Filter>资源文件</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="player.hpp">
       <Filter>源文件</Filter>
     </ClInclude>
