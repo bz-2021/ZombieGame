@@ -19,7 +19,7 @@
 // control
 #define STEP	3
 #define SPEED	3
-#define COMPONENTSPEED SPEED * 0.7
+#define COMPONENTSPEED (int)(SPEED * 0.7) // 若不转换为int则会导致对角线方向移动速度不一致问题
 
 // resources
 #define ZOMBIE_0	_T("./res/zombie_1.png")

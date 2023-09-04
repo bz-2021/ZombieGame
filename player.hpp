@@ -22,8 +22,8 @@ Player::Player(IMAGE* playerImage, int d, int f) {
 	direction = d;
 	frame = f;
 	image = playerImage;
-	posX = 0;
-	posY = 0;
+	posX = WIDTH / 2;
+	posY = HEIGHT / 2;
 	width = playerImage->getwidth() / TOTAL_FRAMES;
 	height = playerImage->getheight() / TOTAL_DIRECTIONS;
 }

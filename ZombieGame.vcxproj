@@ -22,7 +22,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{6e6383e1-4afc-448a-853c-ec4e4bb34b9d}</ProjectGuid>
-    <RootNamespace>ZombieGmae</RootNamespace>
+    <RootNamespace>ZombieGame</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>ZombieGame</ProjectName>
   </PropertyGroup>
@@ -137,8 +137,10 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="control.hpp" />
     <ClInclude Include="define.h" />
     <ClInclude Include="knight.hpp" />
+    <ClInclude Include="map.hpp" />
     <ClInclude Include="player.hpp" />
     <ClInclude Include="transparent_image.hpp" />
     <ClInclude Include="zombie.hpp" />
