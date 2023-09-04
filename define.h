@@ -4,7 +4,8 @@
 #define WIDTH		1200
 #define HEIGHT		775
 
-#define TOTAL_FRAMES 36
+#define ZOMBIE_TOTAL_FRAMES 36
+#define KNIGHT_TOTAL_FRAMRS 32
 #define TOTAL_DIRECTIONS 8
 
 // keys
@@ -12,8 +13,8 @@
 #define	CMD_DOWN		1 << 1
 #define	CMD_LEFT		1 << 2
 #define	CMD_RIGHT		1 << 3
-#define KEY_J			1 << 4
-#define KEY_K			1 << 5
+#define CMD_ATTACK			1 << 4
+#define CMD_DIE			1 << 5
 #define KEY_L			1 << 6
 
 // control
@@ -23,5 +24,5 @@
 
 // resources
 #define ZOMBIE_0	_T("./res/zombie_1.png")
-#define SKELETON_0  _T("./res/skeleton_0.png")
+#define KNIGHT_0  _T("./res/skeleton_0.png")
 #define BIGMAP		_T("./res/big_map.jpg")

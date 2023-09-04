@@ -27,7 +27,7 @@ class Zombie : public Player {
 public:
 	Zombie(IMAGE*, int d = 0, int f = 0);
 	void setFrame();
-	void putThisFrameImageOntoScreenCenter(int, int);
+	void putThisFrameImage(int, int);
 	int getDirection();
 	void setAction(ZombieAction);
 	void setPos(int x, int y);
@@ -60,8 +60,8 @@ void Zombie::setFrame() {
 	}
 }
 
-// 将当前状态的人物显示到屏幕中心
-void Zombie::putThisFrameImageOntoScreenCenter(int dstX, int dstY) {
+// 将当前状态的人物显示到屏幕
+void Zombie::putThisFrameImage(int dstX, int dstY) {
 	if (image == NULL) {
 		return;
 	}
@@ -91,20 +91,20 @@ void Zombie::putThisFrameImageOntoScreenCenter(int dstX, int dstY) {
 	transparentimage3(NULL, dstX - width / 2, dstY - height / 2, width, height, srcX, srcY, image);
 }
 
-// 人物按照用户输入做出反应 
+// 人物按照用户输入做出反应
 inline void Zombie::react(int _cmd)
 {
 	if (action == attack || action == die || action == headshoot) {
-
+		// 不做反应
 	}
 	else if (!_cmd) {
 		action = stance;
 	}
-	else if (_cmd & KEY_J) {
+	else if (_cmd & CMD_ATTACK) {
 		frame = 0;
 		action = attack;
 	}
-	else if (_cmd & KEY_K) {
+	else if (_cmd & CMD_DIE) {
 		frame = 0;
 		action = die;
 	}
@@ -115,7 +115,6 @@ inline void Zombie::react(int _cmd)
 	else {
 		action = walk;
 	}
-	// _cmd &= ~KEY_J, _cmd &= ~KEY_K, _cmd &= ~KEY_L;
 	if (action == walk) {
 		switch (direction)
 		{

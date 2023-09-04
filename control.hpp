@@ -16,8 +16,8 @@ int GetPlayer1Command() { // 获取用户1键盘输入
 	if (GetAsyncKeyState(VK_RIGHT) & 0x8000)	c |= CMD_RIGHT;
 	if (GetAsyncKeyState(VK_UP) & 0x8000)		c |= CMD_UP;
 	if (GetAsyncKeyState(VK_DOWN) & 0x8000)		c |= CMD_DOWN;
-	if (GetAsyncKeyState('J') & 0x8000)			c |= KEY_J;
-	if (GetAsyncKeyState('K') & 0x8000)			c |= KEY_K;
+	if (GetAsyncKeyState('J') & 0x8000)			c |= CMD_ATTACK;
+	if (GetAsyncKeyState('K') & 0x8000)			c |= CMD_DIE;
 	if (GetAsyncKeyState('L') & 0x8000)			c |= KEY_L;
 	return c;
 }
@@ -25,11 +25,11 @@ int GetPlayer1Command() { // 获取用户1键盘输入
 int GetPlayer2Command() { // 获取用户2键盘输入
 	int c = 0;
 	if (GetAsyncKeyState('A') & 0x8000)		c |= CMD_LEFT;
-	if (GetAsyncKeyState('D') & 0x8000)	c |= CMD_RIGHT;
+	if (GetAsyncKeyState('D') & 0x8000)		c |= CMD_RIGHT;
 	if (GetAsyncKeyState('W') & 0x8000)		c |= CMD_UP;
 	if (GetAsyncKeyState('S') & 0x8000)		c |= CMD_DOWN;
-	if (GetAsyncKeyState('F') & 0x8000)			c |= KEY_J;
-	if (GetAsyncKeyState('G') & 0x8000)			c |= KEY_K;
-	if (GetAsyncKeyState('H') & 0x8000)			c |= KEY_L;
+	if (GetAsyncKeyState('F') & 0x8000)		c |= CMD_ATTACK;
+	if (GetAsyncKeyState('G') & 0x8000)		c |= CMD_DIE;
+	if (GetAsyncKeyState('H') & 0x8000)		c |= KEY_L;
 	return c;
 }

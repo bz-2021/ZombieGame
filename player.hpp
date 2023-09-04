@@ -24,7 +24,7 @@ Player::Player(IMAGE* playerImage, int d, int f) {
 	image = playerImage;
 	posX = WIDTH / 2;
 	posY = HEIGHT / 2;
-	width = playerImage->getwidth() / TOTAL_FRAMES;
+	width = playerImage->getwidth() / ZOMBIE_TOTAL_FRAMES;
 	height = playerImage->getheight() / TOTAL_DIRECTIONS;
 }
 
